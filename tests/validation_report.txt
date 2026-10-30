@@ -1,0 +1,46 @@
+==============================================================================
+ARROWSTACK TECHNOLOGIES - DATA ANALYTICS INTERNSHIP (BATCH 2026)
+PROJECT 1: SALES PERFORMANCE DASHBOARD - AUTOMATED VALIDATION REPORT
+Candidate: Sujal Pandya | Roll ID: AS-2026-92197 | Reference: AST/INT/2026/OFFER/92197
+Report Timestamp: 2026-10-30T12:52:22+05:30
+Execution Environment: Python 3.13.2 | pytest 9.2.0 | Windows 64-bit
+==============================================================================
+
+TEST EXECUTION RESULTS:
+------------------------------------------------------------------------------
+Test 1: test_data_artifacts_exist
+Status: PASSED [16%]
+Details: Verified existence of cleaned_sales_data.csv, sales_database.db, and
+         sales_performance_analysis.xlsx in target directories.
+
+Test 2: test_sales_data_integrity
+Status: PASSED [33%]
+Details: Verified row count (3,800 records), zero missing values in mandatory
+         fields, quantity > 0, unit_price >= 0, discount_rate in [0.0, 1.0],
+         and net_revenue <= gross_revenue.
+
+Test 3: test_kpi_calculations_and_formulas
+Status: PASSED [50%]
+Details: Confirmed mathematical accuracy for gross revenue, net revenue,
+         and Average Order Value (AOV = sum(net_rev) / count(orders)).
+
+Test 4: test_sqlite_database_tables
+Status: PASSED [66%]
+Details: Verified Star Schema structure in SQLite: fact_sales, fact_daily_traffic,
+         dim_products, and dim_customers.
+
+Test 5: test_traffic_funnel_hierarchy
+Status: PASSED [83%]
+Details: Zero violations detected across all 663 recorded days for the
+         acquisition funnel constraint: Sessions >= Views >= Carts >= Orders.
+
+Test 6: test_excel_workbook_structure
+Status: PASSED [100%]
+Details: Validated workbook integrity, ensuring presence of 'Executive KPI Summary',
+         'Monthly Trends', 'Regional Performance', 'Product Category Analysis',
+         and 'Cleaned Sales Data' worksheets with native formulas.
+
+==============================================================================
+SUMMARY: 6 PASSED, 0 FAILED, 0 SKIPPED (Total Execution Time: 1.61s)
+VALIDATION VERDICT: APPROVED FOR PORTFOLIO AND MENTOR REVIEW
+==============================================================================
